@@ -1,4 +1,3 @@
-from turtle import mode
 from django.db import models
 from school.models import MyUser
 from django.urls import reverse
