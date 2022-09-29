@@ -1,0 +1,242 @@
+{%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+</head>
+<style>
+    /*
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.2.2
+*/
+/* for all templates and grids */
+body{text-align:center;}
+#ft{clear:both;}
+/**/
+/* 750 centered, and backward compatibility */ 
+#doc,#doc2,#doc3,.yui-t1,.yui-t2,.yui-t3,.yui-t4,.yui-t5,.yui-t6,.yui-t7 {
+	margin:auto;text-align:left;
+	width:57.69em;*width:56.3em;min-width:750px;}
+/* 950 centered */ 
+#doc2 {
+	width:73.074em;*width:71.313em;min-width:950px;}
+/* 100% with 10px viewport side matting */ 
+#doc3 {
+	margin:auto 10px; /* not for structure, but so content doesn't bleed to edge */
+	width:auto;}
+	
+/* below required for all fluid grids; adjust widths and margins above accordingly */
+
+	/* to preserve source-order independence for Gecko */
+	.yui-b{position:relative;}
+	.yui-b{_position:static;} /* for IE < 7 */
+	#yui-main .yui-b{position:static;} 
+
+#yui-main {width:100%;}
+.yui-t1 #yui-main,
+.yui-t2 #yui-main,
+.yui-t3 #yui-main{float:right;margin-left:-25em;/* IE: preserve layout at narrow widths */}
+
+.yui-t4 #yui-main,
+.yui-t5 #yui-main,
+.yui-t6 #yui-main{float:left;margin-right:-25em;/* IE: preserve layout at narrow widths */}
+
+.yui-t1 .yui-b {
+	float:left;
+    width:12.3207em;*width:12.0106em;}
+.yui-t1 #yui-main .yui-b{
+    margin-left:13.3207em;*margin-left:13.0106em;
+}
+
+.yui-t2 .yui-b {
+	float:left;
+    width:13.8456em;*width:13.512em;}
+.yui-t2 #yui-main .yui-b {
+    margin-left:14.8456em;*margin-left:14.512em;
+}
+
+.yui-t3 .yui-b {
+	float:left;
+    width:23.0759em;*width:22.52em;}
+.yui-t3 #yui-main .yui-b {
+    margin-left:24.0759em;*margin-left:23.52em;
+}
+
+.yui-t4 .yui-b {
+	float:right;
+    width:13.8456em;*width:13.512em;}
+.yui-t4 #yui-main .yui-b {
+    margin-right:14.8456em;*margin-right:14.512em;
+}
+
+.yui-t5 .yui-b {
+	float:right;
+    width:18.4608em;*width:18.016em;}
+.yui-t5 #yui-main .yui-b {
+    margin-right:19.4608em;*margin-right:19.016em;
+}
+
+.yui-t6 .yui-b {
+	float:right;
+    width:23.0759em;*width:22.52em;}
+.yui-t6 #yui-main .yui-b {
+    margin-right:24.0759em;*margin-right:23.52em;
+}
+
+.yui-t7 #yui-main .yui-b {
+	display:block;margin:0 0 1em 0;
+}
+#yui-main .yui-b {float:none;width:auto;}
+/* GRIDS (not TEMPLATES) */
+.yui-g .yui-u, 
+.yui-g .yui-g, 
+.yui-gc .yui-u,
+.yui-gc .yui-g .yui-u,
+.yui-ge .yui-u, 
+.yui-gf .yui-u{float:right;display:inline;}
+.yui-g div.first, 
+.yui-gc div.first,
+.yui-gc div.first div.first,
+.yui-gd div.first, 
+.yui-ge div.first, 
+.yui-gf div.first{float:left;}
+.yui-g .yui-u, 
+.yui-g .yui-g{width:49.1%;}
+.yui-g .yui-g .yui-u,
+.yui-gc .yui-g .yui-u {width:48.1%;}
+.yui-gb .yui-u, 
+.yui-gc .yui-u, 
+.yui-gd .yui-u{float:left;margin-left:2%;*margin-left:1.895%;width:32%;}
+.yui-gb div.first, 
+.yui-gc div.first, 
+.yui-gd div.first{margin-left:0;}
+.yui-gc div.first, 
+.yui-gd .yui-u{width:66%;}
+.yui-gd div.first{width:32%;}
+.yui-ge .yui-u{width:24%;}
+.yui-ge div.first, 
+.yui-gf .yui-u{width:74.2%;}
+.yui-gf div.first{width:24%;}
+.yui-ge div.first{width:74.2%;}
+#bd:after,
+.yui-g:after, 
+.yui-gb:after, 
+.yui-gc:after, 
+.yui-gd:after, 
+.yui-ge:after, 
+.yui-gf:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#bd,
+.yui-g, 
+.yui-gb, 
+.yui-gc, 
+.yui-gd, 
+.yui-ge, 
+.yui-gf{zoom:1;}
+
+/* Basic Element Formatting */
+
+#header{
+	height:100px;
+	background-color:#F3F2ED;
+	margin:0;
+	padding:0;
+	}
+	
+#header h1{
+	font-size:1em;
+	margin:0;
+	padding:10px;
+	}
+	
+#header h1 a{
+	color:#000000;
+	background-color:#F3F2ED;
+	}
+
+.content{
+	height:300px;
+	background:#CCC8B3;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+
+#secondary{
+	height:300px;
+	background:#F6F0E0;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+
+#secondaryFull{
+	height:50px;
+	background-color:#CFB59F;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+
+#footer{
+	height:50px;
+	background:#BFBD93;
+	border-top:#FFFFFF 2px solid;
+	margin:0;
+	padding:0;
+	}
+</style>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>240 Pixel Right Column, Single Main Column.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="doc3" class="yui-t5">
+  <div id="hd">
+    <!-- <div id="header"><h1><a href="http://www.free-css.com/free-css-layouts.php">Free CSS Layouts</a></h1></div> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </div>
+  <div id="bd" >
+    <div id="yui-main" >
+      <div class="yui-b">
+        <div class="content"><video width="100%" height="360" controls><source src="{{lesson.video.url}}" type="video/mp4"></video></div>
+      </div>
+    </div>
+    <div class="yui-b">
+      <div id="secondary">{{lesson.lesson_title}}</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
